@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/options1Fragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/menu_options_1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/options2Fragment"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/menu_options_2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/options3Fragment"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/menu_options_3"
+        app:showAsAction="never" />
+</menu>

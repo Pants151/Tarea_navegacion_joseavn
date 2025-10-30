@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">Tarea_navegacion_joseavn</string>
+    <string name="app_name">Tarea de Navegación</string>
+
+    <!-- Textos para Fragments -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_1_fragment">Fragment Drawer 1</string>
+    <string name="drawer_2_fragment">Fragment Drawer 2</string>
+    <string name="drawer_3_fragment">Fragment Drawer 3</string>
+    <string name="bottom_1_fragment">Fragment Bottom 1</string>
+    <string name="bottom_2_fragment">Fragment Bottom 2</string>
+    <string name="bottom_3_fragment">Fragment Bottom 3</string>
+    <string name="options_1_fragment">Fragment Options 1</string>
+    <string name="options_2_fragment">Fragment Options 2</string>
+    <string name="options_3_fragment">Fragment Options 3</string>
+    <string name="tabs_host_fragment">Fragment Contenedor de Tabs</string>
+    <string name="tab_a_fragment">Fragment Pestaña A</string>
+    <string name="tab_b_fragment">Fragment Pestaña B</string>
+    <string name="tab_c_fragment">Fragment Pestaña C</string>
+
+    <!-- Nombres para Menus -->
+    <string name="menu_drawer_1">Drawer 1</string>
+    <string name="menu_drawer_2">Drawer 2</string>
+    <string name="menu_drawer_3">Drawer 3</string>
+    <string name="menu_tabs_host">Tabs (ViewPager2)</string>
+
+    <string name="menu_bottom_1">Bottom 1</string>
+    <string name="menu_bottom_2">Bottom 2</string>
+    <string name="menu_bottom_3">Bottom 3</string>
+
+    <string name="menu_options_1">Options 1</string>
+    <string name="menu_options_2">Options 2</string>
+    <string name="menu_options_3">Options 3</string>
+
+    <!-- Header del Drawer -->
+    <string name="drawer_header_title">Tarea Navegación</string>
+    <string name="drawer_header_subtitle">José Antonio Valenzuela Núñez, 2ºDAM</string>
+
+    <!-- Pestañas del TabLayout -->
+    <string name="tab_a">Pestaña A</string>
+    <string name="tab_b">Pestaña B</string>
+    <string name="tab_c">Pestaña C</string>
 </resources>
