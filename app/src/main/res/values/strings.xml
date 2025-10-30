@@ -21,7 +21,7 @@
     <string name="menu_drawer_1">Drawer 1</string>
     <string name="menu_drawer_2">Drawer 2</string>
     <string name="menu_drawer_3">Drawer 3</string>
-    <string name="menu_tabs_host">Tabs (ViewPager2)</string>
+    <string name="menu_tabs_host">Tabs</string>
 
     <string name="menu_bottom_1">Bottom 1</string>
     <string name="menu_bottom_2">Bottom 2</string>

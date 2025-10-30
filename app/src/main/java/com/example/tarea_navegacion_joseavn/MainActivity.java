@@ -3,7 +3,6 @@ package com.example.tarea_navegacion_joseavn;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -75,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
         // Esto gestiona los clics en los ítems del menú inferior.
         NavigationUI.setupWithNavController(binding.bottomNavView, navController);
 
-        // Nota: El OptionsMenu se gestiona manualmente en los métodos de abajo.
-
         // Manejar el botón "Atrás" del sistema para cerrar el drawer si está abierto
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
@@ -85,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                     binding.drawerLayout.closeDrawer(GravityCompat.START);
                 } else {
                     // Si el callback está habilitado, pero no queremos sobreescribir el comportamiento,
-                    // lo deshabilitamos y volvemos a llamar al dispatcher.
                     setEnabled(false);
                     getOnBackPressedDispatcher().onBackPressed();
                 }
@@ -109,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // --- Gestión del Botón Arriba/Hamburguesa ---
-
     @Override
     public boolean onSupportNavigateUp() {
 
