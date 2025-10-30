@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -74,6 +76,21 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.bottomNavView, navController);
 
         // Nota: El OptionsMenu se gestiona manualmente en los métodos de abajo.
+
+        // Manejar el botón "Atrás" del sistema para cerrar el drawer si está abierto
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    binding.drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    // Si el callback está habilitado, pero no queremos sobreescribir el comportamiento,
+                    // lo deshabilitamos y volvemos a llamar al dispatcher.
+                    setEnabled(false);
+                    getOnBackPressedDispatcher().onBackPressed();
+                }
+            }
+        });
     }
 
     // --- Gestión del OptionsMenu (Menú de 3 puntos) ---
@@ -99,15 +116,5 @@ public class MainActivity extends AppCompatActivity {
         // Dejar que NavigationUI maneje el clic en el botón "Atrás" o "Hamburguesa"
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
-
-    // Opcional: Manejar el botón "Atrás" del sistema para cerrar el drawer si está abierto
-    @Override
-    public void onBackPressed() {
-        if (binding.drawerLayout.isDrawerOpen(androidx.core.view.GravityCompat.START)) {
-            binding.drawerLayout.closeDrawer(androidx.core.view.GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 }
